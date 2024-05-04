@@ -1,6 +1,6 @@
 const ProductModel = require("../models/product.model.js")
 
-class ProductManager {
+class ProductService {
 
     async addProduct({ title, description, price, thumbnail, code, stock, category, status }) {
         try {
@@ -78,4 +78,4 @@ class ProductManager {
     }
 }
 
-module.exports = ProductManager
+module.exports = ProductService

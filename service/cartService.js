@@ -1,6 +1,6 @@
 const CartModel = require("../models/cart.model.js")
 
-class CartManager {
+class CartService {
 
     async addCart() {
         try {
@@ -110,7 +110,7 @@ class CartManager {
                 throw new Error(`Product with Id: ${cid} not found in Cart with Id: ${cid}`)
             }
         } catch (error) {
-
+            throw error
         }
     }
 
@@ -127,6 +127,7 @@ class CartManager {
             throw error
         }
     }
+
 }
 
-module.exports = CartManager
+module.exports = CartService
